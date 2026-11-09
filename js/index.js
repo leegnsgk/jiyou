@@ -3,16 +3,19 @@ import "./components/battle-intro.js";
 import "./components/routine-list.js";
 import "./components/celebration-message.js";
 import "./components/adventure-map.js";
+import "./components/reward-roulette.js";
 
 const DATA_URL = new URL("../data/motivationMessages.json", import.meta.url);
 const CHARACTERS_URL = new URL("../data/characters.json", import.meta.url);
 const MONSTERS_URL = new URL("../data/monsters.json", import.meta.url);
 const MONSTER_MESSAGES_URL = new URL("../data/monsterMessages.json", import.meta.url);
+const REWARD_GAMES_URL = new URL("../data/rewardGames.json", import.meta.url);
 const SCHEDULE_URL = new URL("../data/defaultSchedule.json", import.meta.url);
 const SCHEDULE_STORAGE_KEY = "chiikawaDailyRoutine.schedule";
 const battleIntro = document.querySelector("#battleIntro");
 const routineList = document.querySelector("#routineList");
 const celebrationLayer = document.querySelector("#celebrationLayer");
+const rewardRoulette = document.querySelector("#rewardRoulette");
 const adventureMap = document.querySelector("#adventureMap");
 const adventureMapButton = document.querySelector("#adventureMapButton");
 const status = document.querySelector("#status");
@@ -26,6 +29,7 @@ let selectedCharacter = null;
 let selectedMonster = null;
 let monsterMessages = [];
 let celebrationMessages = [];
+let rewardGames = [];
 
 function showBattleIntro(messages, characters) {
   const characterText = messages[Math.floor(Math.random() * messages.length)];
@@ -63,13 +67,14 @@ function showTodayRoutine() {
 
 async function initialize() {
   try {
-    const [messageResponse, charactersResponse, monstersResponse, monsterMessagesResponse, scheduleResponse, celebrationResponse] = await Promise.all([
+    const [messageResponse, charactersResponse, monstersResponse, monsterMessagesResponse, scheduleResponse, celebrationResponse, rewardGamesResponse] = await Promise.all([
       fetch(DATA_URL),
       fetch(CHARACTERS_URL),
       fetch(MONSTERS_URL),
       fetch(MONSTER_MESSAGES_URL),
       fetch(SCHEDULE_URL),
       fetch(new URL("../data/celebrationMessages.json", import.meta.url)),
+      fetch(REWARD_GAMES_URL),
     ]);
     if (!messageResponse.ok) throw new Error(`응원 메시지를 불러오지 못했어요 (${messageResponse.status})`);
     if (!charactersResponse.ok) throw new Error(`캐릭터 정보를 불러오지 못했어요 (${charactersResponse.status})`);
@@ -77,6 +82,7 @@ async function initialize() {
     if (!monsterMessagesResponse.ok) throw new Error(`몬스터 대사를 불러오지 못했어요 (${monsterMessagesResponse.status})`);
     if (!scheduleResponse.ok) throw new Error(`루틴을 불러오지 못했어요 (${scheduleResponse.status})`);
     if (!celebrationResponse.ok) throw new Error(`축하 메시지를 불러오지 못했어요 (${celebrationResponse.status})`);
+    if (!rewardGamesResponse.ok) throw new Error(`보상 놀이를 불러오지 못했어요 (${rewardGamesResponse.status})`);
 
     const messageData = await messageResponse.json();
     const charactersData = await charactersResponse.json();
@@ -94,6 +100,8 @@ async function initialize() {
     }
     const celebrationData = await celebrationResponse.json();
     celebrationMessages = celebrationData.messages;
+    const rewardGamesData = await rewardGamesResponse.json();
+    rewardGames = rewardGamesData.games;
     if (!Array.isArray(messageData.messages) || messageData.messages.length === 0) {
       throw new Error("표시할 응원 메시지가 없어요.");
     }
@@ -108,6 +116,9 @@ async function initialize() {
     }
     if (!Array.isArray(celebrationMessages) || celebrationMessages.length === 0) {
       throw new Error("표시할 축하 메시지가 없어요.");
+    }
+    if (!Array.isArray(rewardGames) || rewardGames.length !== 8) {
+      throw new Error("보상 놀이 8개를 불러오지 못했어요.");
     }
 
     characters = charactersData.characters.map((character) => ({
@@ -136,6 +147,7 @@ routineList.addEventListener("routine-complete", (event) => {
   adventureMap.recordToday();
   celebrationLayer.show(celebrationMessages, event.detail.character);
 });
+celebrationLayer.addEventListener("celebration-confirmed", () => rewardRoulette.show(rewardGames));
 routineList.addEventListener("routine-change", (event) => {
   schedule[event.detail.dayKey] = event.detail.tasks;
   localStorage.setItem(SCHEDULE_STORAGE_KEY, JSON.stringify(schedule));

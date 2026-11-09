@@ -64,7 +64,10 @@ class CelebrationMessage extends HTMLElement {
     this._dialog = this.shadowRoot.querySelector("dialog");
     this._card = this.shadowRoot.querySelector(".card");
     this._fireworks = this.shadowRoot.querySelector(".fireworks");
-    this.shadowRoot.querySelector(".close").addEventListener("click", () => this._dialog.close());
+    this.shadowRoot.querySelector(".close").addEventListener("click", () => {
+      this._dialog.close();
+      this.dispatchEvent(new CustomEvent("celebration-confirmed", { bubbles: true, composed: true }));
+    });
   }
 
   show(messages, character) {

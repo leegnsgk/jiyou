@@ -16,12 +16,16 @@ template.innerHTML = `
     .monster .portrait img { animation: fight-left 1.35s .75s ease-in-out infinite; }
     .character .portrait img { animation: fight-right 1.35s 1.25s ease-in-out infinite; }
     .name { margin: 0 0 7px; color: #79614e; font-size: .78rem; font-weight: 850; }
-    .bubble { position: relative; width: 100%; min-height: 88px; padding: 11px 12px; border: 2px solid #f1dfc4; border-radius: 18px; background: #fff; box-shadow: 0 6px 14px rgb(92 72 50 / 9%); color: #493c35; font-size: clamp(.78rem, 2.1vw, 1rem); font-weight: 750; line-height: 1.5; text-align: center; word-break: keep-all; }
+    .bubble { position: relative; width: 100%; min-height: 88px; margin: 0 0 10px; padding: 11px 12px; border: 2px solid #f1dfc4; border-radius: 18px; background: #fff; box-shadow: 0 6px 14px rgb(92 72 50 / 9%); color: #493c35; font-size: clamp(.78rem, 2.1vw, 1rem); font-weight: 750; line-height: 1.5; text-align: center; word-break: keep-all; }
     .character .bubble { border-color: #f2d998; background: #fffdf4; animation: bubble-in .5s 1s both, bubble-float 2.6s 1.5s ease-in-out infinite; }
     .monster .bubble { border-color: #e6c5d7; background: #fff7fb; animation: bubble-in .5s .2s both, bubble-float 2.6s .7s ease-in-out infinite; }
-    .bubble::after { position: absolute; top: -9px; left: calc(50% - 8px); width: 14px; height: 14px; border-top: 2px solid #f1dfc4; border-left: 2px solid #f1dfc4; background: #fff; content: ""; transform: rotate(45deg); }
-    .character .bubble::after { border-color: #f2d998; background: #fffdf4; }
-    .monster .bubble::after { border-color: #e6c5d7; background: #fff7fb; }
+    .bubble::before, .bubble::after { position: absolute; content: ""; clip-path: polygon(0 0, 100% 0, 50% 100%); }
+    .bubble::before { bottom: -13px; left: calc(50% - 10px); width: 20px; height: 15px; background: #f1dfc4; }
+    .bubble::after { bottom: -9px; left: calc(50% - 7px); width: 14px; height: 11px; background: #fff; }
+    .character .bubble::before { background: #f2d998; }
+    .character .bubble::after { background: #fffdf4; }
+    .monster .bubble::before { background: #e6c5d7; }
+    .monster .bubble::after { background: #fff7fb; }
     .vs { z-index: 1; display: grid; width: 42px; height: 42px; place-items: center; border: 3px solid #fff; border-radius: 50%; background: linear-gradient(140deg, #ffb65d, #f27c79); box-shadow: 0 4px 12px rgb(180 94 69 / 25%); color: white; font-size: .86rem; font-weight: 950; animation: versus .75s .25s cubic-bezier(.2,1.6,.4,1) both, versus-pulse 1.4s 1s ease-in-out infinite; }
     @keyframes enter-left { from { opacity: 0; transform: translateX(-45px) rotate(-8deg) scale(.82); } to { opacity: 1; transform: translateX(0) rotate(0) scale(1); } }
     @keyframes enter-right { from { opacity: 0; transform: translateX(45px) rotate(8deg) scale(.82); } to { opacity: 1; transform: translateX(0) rotate(0) scale(1); } }
@@ -45,15 +49,15 @@ template.innerHTML = `
   <section class="arena" aria-label="캐릭터와 몬스터의 대결">
     <div class="duel">
       <article class="fighter monster">
+        <p class="bubble monster-message" lang="ko"></p>
         <figure class="portrait"><img class="monster-image" alt=""></figure>
         <p class="name monster-name"></p>
-        <p class="bubble monster-message" lang="ko"></p>
       </article>
       <span class="vs" aria-hidden="true">VS</span>
       <article class="fighter character">
+        <p class="bubble character-message" lang="ko"></p>
         <figure class="portrait"><img class="character-image" alt=""></figure>
         <p class="name character-name"></p>
-        <p class="bubble character-message" lang="ko"></p>
       </article>
     </div>
   </section>

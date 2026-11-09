@@ -55,6 +55,22 @@ template.innerHTML = `
     .fighters.attacking figure:first-of-type { animation: monster-recoil .82s cubic-bezier(.2,.8,.3,1); }
     .fighters.attacking figure:last-of-type { animation: hero-lunge .82s cubic-bezier(.2,.8,.3,1); }
     .fighters.attacking .impact { z-index: 4; color: #fff25c; font-size: 4.2rem; filter: drop-shadow(0 0 8px #ff784e) drop-shadow(0 0 20px #ffcf47); animation: impact .82s ease-out; }
+    .fighters.attacking.action-smash figure:first-of-type { animation: monster-launch .82s cubic-bezier(.2,.8,.3,1); }
+    .fighters.attacking.action-smash figure:last-of-type { animation: hero-smash .82s cubic-bezier(.2,.8,.3,1); }
+    .fighters.attacking.action-smash::before { height: 13px; box-shadow: 0 0 26px 12px rgb(255 91 55 / 80%); animation-name: ground-crack; }
+    .fighters.attacking.action-spin figure:first-of-type { animation: monster-spin-recoil .82s ease-out; }
+    .fighters.attacking.action-spin figure:last-of-type { animation: hero-spin .82s cubic-bezier(.2,.8,.3,1); }
+    .fighters.attacking.action-spin::before { top: 50%; height: 10px; background: linear-gradient(90deg, transparent, #a8f7ff 20%, #fff 50%, #ac8bff 80%, transparent); box-shadow: 0 0 25px 10px rgb(134 151 255 / 70%); animation-name: spin-wave; }
+    .fighters.attacking.action-burst::after { position: absolute; z-index: 2; inset: 10% 25%; border: 5px solid rgb(255 243 109 / 90%); border-radius: 50%; box-shadow: 0 0 30px 12px rgb(255 137 51 / 70%), inset 0 0 22px 10px rgb(255 255 255 / 80%); content: ""; animation: burst-ring .82s ease-out both; }
+    .fighters.attacking.action-burst figure:first-of-type { animation: monster-launch .82s cubic-bezier(.2,.8,.3,1); }
+    .fighters.attacking.action-burst figure:last-of-type { animation: hero-burst .82s cubic-bezier(.2,.8,.3,1); }
+    .fighters.attacking.action-burst::before { height: 100%; left: 50%; width: 42%; border-radius: 50%; background: radial-gradient(circle, #fff 0, #fff7a3 18%, #ff8c44 38%, transparent 72%); box-shadow: none; transform: translateX(-50%) scale(.1); animation: burst-flash .82s ease-out both; }
+    .fighters.attacking.action-dash figure:first-of-type { animation: monster-launch .82s cubic-bezier(.2,.8,.3,1); }
+    .fighters.attacking.action-dash figure:last-of-type { animation: hero-dash .82s cubic-bezier(.15,.75,.25,1); }
+    .fighters.attacking.action-dash::before { top: 37%; left: 6%; width: 88%; height: 3px; background: repeating-linear-gradient(90deg, transparent 0 12px, #b9f8ff 12px 24px); box-shadow: 0 0 18px 5px rgb(78 218 255 / 72%); animation-name: dash-trails; }
+    .fighters.attacking.action-wave figure:first-of-type { animation: monster-wave-hit .82s ease-out; }
+    .fighters.attacking.action-wave figure:last-of-type { animation: hero-wave .82s ease-in-out; }
+    .fighters.attacking.action-wave::before { top: 50%; left: 10%; width: 80%; height: 26px; border-radius: 50%; background: linear-gradient(90deg, transparent, #81f4ff, #fff, #bd8cff, transparent); box-shadow: 0 0 30px 14px rgb(105 204 255 / 72%); animation-name: energy-wave; }
     .fighters.defeated figure:first-of-type { filter: grayscale(1); opacity: .35; transform: rotate(12deg) scale(.88); transition: .35s ease; }
     .battle-message { min-height: 1.2em; margin: 4px 0 0; color: #756761; font-size: .78rem; text-align: center; }
     @keyframes hero-lunge { 0%, 100% { transform: translateX(0) scale(1); } 30% { transform: translateX(-34px) rotate(-9deg) scale(1.18); } 56% { transform: translateX(9px) rotate(5deg) scale(.94); } 76% { transform: translateX(-7px) rotate(-3deg) scale(1.04); } }
@@ -62,6 +78,20 @@ template.innerHTML = `
     @keyframes stage-shake { 0%, 100% { transform: translateX(0); } 28% { transform: translateX(-5px); } 38% { transform: translateX(6px); } 50% { transform: translateX(-4px); } 62% { transform: translateX(3px); } }
     @keyframes slash { 0% { opacity: 0; transform: rotate(-10deg) scaleX(0); } 28% { opacity: 1; transform: rotate(-10deg) scaleX(1); } 70% { opacity: .7; } 100% { opacity: 0; transform: rotate(-10deg) scaleX(.4); } }
     @keyframes impact { 0%, 20% { opacity: 0; transform: translate(-50%, -50%) scale(.1) rotate(-30deg); } 38% { opacity: 1; transform: translate(-50%, -50%) scale(1.5) rotate(18deg); } 70% { opacity: .95; transform: translate(-50%, -50%) scale(1) rotate(0); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(.2) rotate(30deg); } }
+    @keyframes hero-smash { 0%, 100% { transform: translate(0, 0) scale(1); } 22% { transform: translate(-12px, -24px) scale(1.08) rotate(-8deg); } 44% { transform: translate(-37px, 12px) scale(1.22) rotate(12deg); } 68% { transform: translate(6px, -3px) scale(.94) rotate(-4deg); } }
+    @keyframes monster-launch { 0%, 100% { transform: translate(0, 0) scale(1); } 36% { transform: translate(36px, -6px) rotate(20deg) scale(.78); } 60% { transform: translate(18px, 6px) rotate(-12deg) scale(.9); } }
+    @keyframes hero-spin { 0%, 100% { transform: translateX(0) rotate(0) scale(1); } 42% { transform: translateX(-30px) rotate(-300deg) scale(1.16); } 68% { transform: translateX(5px) rotate(-360deg) scale(.98); } }
+    @keyframes monster-spin-recoil { 0%, 100% { transform: translateX(0) rotate(0); } 42% { transform: translateX(28px) rotate(32deg) scale(.84); } 70% { transform: translateX(10px) rotate(-18deg); } }
+    @keyframes spin-wave { 0% { opacity: 0; transform: rotate(-10deg) scaleX(.1); } 35% { opacity: 1; transform: rotate(8deg) scaleX(1); } 100% { opacity: 0; transform: rotate(35deg) scaleX(.15); } }
+    @keyframes ground-crack { 0% { opacity: 0; transform: rotate(-10deg) scaleX(.1); } 38% { opacity: 1; transform: rotate(-10deg) scaleX(1); } 100% { opacity: 0; transform: rotate(-10deg) scaleX(.55); } }
+    @keyframes burst-ring { 0% { opacity: 0; transform: scale(.1); } 35% { opacity: 1; transform: scale(1.25); } 100% { opacity: 0; transform: scale(2.2); } }
+    @keyframes burst-flash { 0%, 100% { opacity: 0; transform: translateX(-50%) scale(.1); } 32% { opacity: 1; transform: translateX(-50%) scale(1.5); } 60% { opacity: .7; } }
+    @keyframes hero-burst { 0%, 100% { transform: translateX(0) scale(1); } 32% { transform: translateX(-40px) scale(1.25) rotate(-12deg); } 62% { transform: translateX(8px) scale(.9) rotate(6deg); } }
+    @keyframes hero-dash { 0%, 100% { transform: translateX(0) scale(1); } 16% { transform: translateX(8px) scale(.88); } 42% { transform: translateX(-54px) scale(1.14) rotate(-8deg); } 70% { transform: translateX(8px) scale(.96); } }
+    @keyframes dash-trails { 0% { opacity: 0; transform: rotate(-8deg) scaleX(.1); } 35% { opacity: 1; transform: rotate(-8deg) scaleX(1); } 100% { opacity: 0; transform: rotate(-8deg) scaleX(.2); } }
+    @keyframes hero-wave { 0%, 100% { transform: translateX(0) scale(1); } 28% { transform: translateX(-14px) scale(1.1); } 48% { transform: translateX(-29px) scale(1.14); } 72% { transform: translateX(5px) scale(.96); } }
+    @keyframes monster-wave-hit { 0%, 100% { transform: translateX(0) scale(1); } 38% { transform: translateX(23px) scale(.8) rotate(14deg); } 64% { transform: translateX(8px) scale(.94) rotate(-7deg); } }
+    @keyframes energy-wave { 0% { opacity: 0; transform: rotate(-5deg) scaleX(.1); } 34% { opacity: 1; transform: rotate(4deg) scaleX(1.1); } 100% { opacity: 0; transform: rotate(12deg) scaleX(.15); } }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
     @media (max-width: 560px) {
       .tasks { gap: 5px; }
@@ -113,6 +143,15 @@ const dayNames = {
   Monday: "월요일", Tuesday: "화요일", Wednesday: "수요일", Thursday: "목요일",
   Friday: "금요일", Saturday: "토요일", Sunday: "일요일",
 };
+
+const attackActions = [
+  { className: "action-slash", icon: "✦", message: "강력한 참격!" },
+  { className: "action-smash", icon: "✹", message: "힘껏 내려찍기!" },
+  { className: "action-spin", icon: "✧", message: "회전 돌파 공격!" },
+  { className: "action-burst", icon: "✹", message: "필살 폭발 공격!" },
+  { className: "action-dash", icon: "➤", message: "초고속 돌진!" },
+  { className: "action-wave", icon: "⚡", message: "에너지 파동 발사!" },
+];
 
 class RoutineList extends HTMLElement {
   constructor() {
@@ -366,15 +405,19 @@ class RoutineList extends HTMLElement {
     }
 
     this._busy = true;
-    playAttackSound();
+    const attackIndex = (Math.max(1, Number(task.sortOrder) || 1) - 1) % attackActions.length;
+    const attack = attackActions[attackIndex];
+    playAttackSound(attackIndex);
     this.shadowRoot.querySelectorAll(".task-actions button, .add").forEach((button) => { button.disabled = true; });
     this.shadowRoot.querySelectorAll('input[type="checkbox"]').forEach((input) => { input.disabled = true; });
     const fighters = this.shadowRoot.querySelector(".fighters");
     fighters.classList.add("visible");
-    fighters.classList.remove("attacking");
+    fighters.classList.remove("attacking", ...attackActions.map((action) => action.className));
+    fighters.classList.add(attack.className);
+    this.shadowRoot.querySelector(".impact").textContent = attack.icon;
     void fighters.offsetWidth;
     fighters.classList.add("attacking");
-    battleMessage.textContent = `${this._entry.character.name}의 공격! ${task.text} 완료!`;
+    battleMessage.textContent = `${this._entry.character.name}의 ${attack.message} ${task.text} 완료!`;
 
     await new Promise((resolve) => setTimeout(resolve, 850));
     this._completed.add(task.id);

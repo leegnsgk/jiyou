@@ -28,6 +28,32 @@ function playTone(context, frequency, start, duration, volume, type = "sine", en
   oscillator.stop(start + duration + 0.015);
 }
 
+function playNoiseBurst(context, start, duration, filterType, startFrequency, endFrequency, volume, resonance = 0.7) {
+  if (!noiseBuffer) {
+    const length = Math.floor(context.sampleRate * 0.5);
+    noiseBuffer = context.createBuffer(1, length, context.sampleRate);
+    const samples = noiseBuffer.getChannelData(0);
+    for (let i = 0; i < length; i++) samples[i] = (Math.random() * 2 - 1) * (1 - i / length);
+  }
+
+  const source = context.createBufferSource();
+  const filter = context.createBiquadFilter();
+  const gain = context.createGain();
+  source.buffer = noiseBuffer;
+  filter.type = filterType;
+  filter.Q.setValueAtTime(resonance, start);
+  filter.frequency.setValueAtTime(startFrequency, start);
+  filter.frequency.exponentialRampToValueAtTime(Math.max(20, endFrequency), start + duration);
+  gain.gain.setValueAtTime(0.0001, start);
+  gain.gain.exponentialRampToValueAtTime(volume, start + Math.min(0.014, duration / 4));
+  gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
+  source.connect(filter);
+  filter.connect(gain);
+  gain.connect(context.destination);
+  source.start(start, 0, duration);
+  source.stop(start + duration + 0.012);
+}
+
 export function playButtonClick() {
   const context = getAudioContext();
   if (!context) return;
@@ -39,30 +65,14 @@ export function playAttackSound() {
   const context = getAudioContext();
   if (!context) return;
   const now = context.currentTime;
-  playTone(context, 190, now, 0.16, 0.085, "triangle", 62);
-  playTone(context, 470, now, 0.11, 0.026, "sawtooth", 150);
-
-  if (!noiseBuffer) {
-    const length = Math.floor(context.sampleRate * 0.12);
-    noiseBuffer = context.createBuffer(1, length, context.sampleRate);
-    const samples = noiseBuffer.getChannelData(0);
-    for (let i = 0; i < length; i++) samples[i] = (Math.random() * 2 - 1) * (1 - i / length);
-  }
-  const noise = context.createBufferSource();
-  const filter = context.createBiquadFilter();
-  const gain = context.createGain();
-  noise.buffer = noiseBuffer;
-  filter.type = "lowpass";
-  filter.frequency.setValueAtTime(1250, now);
-  filter.frequency.exponentialRampToValueAtTime(260, now + 0.12);
-  gain.gain.setValueAtTime(0.0001, now);
-  gain.gain.exponentialRampToValueAtTime(0.035, now + 0.008);
-  gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.12);
-  noise.connect(filter);
-  filter.connect(gain);
-  gain.connect(context.destination);
-  noise.start(now);
-  noise.stop(now + 0.13);
+  // Fast weapon-like sweep, a heavy impact, then a sharp follow-up clash.
+  playNoiseBurst(context, now, 0.28, "bandpass", 2200, 180, 0.055, 1.1);
+  playTone(context, 230, now, 0.27, 0.09, "triangle", 42);
+  playTone(context, 610, now + 0.015, 0.19, 0.035, "sawtooth", 125);
+  playNoiseBurst(context, now + 0.16, 0.24, "lowpass", 1150, 115, 0.105, 0.6);
+  playTone(context, 96, now + 0.16, 0.34, 0.13, "sine", 38);
+  playTone(context, 280, now + 0.205, 0.18, 0.045, "square", 72);
+  playTone(context, 920, now + 0.39, 0.12, 0.026, "sawtooth", 250);
 }
 
 export function playCelebrationSound() {

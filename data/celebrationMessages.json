@@ -1,506 +1,506 @@
 {
   "version": 1,
-  "description": "모든 루틴 완료 시 무작위로 보여줄 축하 메시지",
+  "description": "루틴 완료와 몬스터 승리 후 보여줄 동기부여 축하 메시지",
   "messages": [
     {
       "id": "celebration-001",
       "trigger": "complete",
-      "text": "지유야, 오늘 루틴을 전부 해냈어! 정말 대단해!"
+      "text": "오늘 루틴을 끝까지 완수했어! 가슴이 벅찰 만큼 뿌듯해!"
     },
     {
       "id": "celebration-002",
       "trigger": "complete",
-      "text": "우와아! 지유의 노력으로 몬스터를 물리쳤어!"
+      "text": "오늘 루틴을 끝까지 완수했어! 이 기쁨을 마음껏 누릴래!"
     },
     {
       "id": "celebration-003",
       "trigger": "complete",
-      "text": "오늘의 미션 올 클리어! 지유가 최고야!"
+      "text": "오늘 루틴을 끝까지 완수했어! 오늘의 나는 어제보다 더 강해!"
     },
     {
       "id": "celebration-004",
       "trigger": "complete",
-      "text": "루틴을 하나씩 완성한 지유, 정말 멋진 모험가야!"
+      "text": "오늘 루틴을 끝까지 완수했어! 내 안에 용기와 자신감이 가득 차올라!"
     },
     {
       "id": "celebration-005",
       "trigger": "complete",
-      "text": "해냈다! 오늘 쌓은 노력은 지유의 보물이야!"
+      "text": "오늘 루틴을 끝까지 완수했어! 나 자신에게 큰 박수를 보내자!"
     },
     {
       "id": "celebration-006",
       "trigger": "complete",
-      "text": "축하해, 지유야! 끝까지 해낸 용기가 반짝반짝 빛나!"
+      "text": "오늘 루틴을 끝까지 완수했어! 이 성취감을 꼭 오래 기억할 거야!"
     },
     {
       "id": "celebration-007",
       "trigger": "complete",
-      "text": "오늘의 루틴 완료! 스스로에게 큰 박수 보내자!"
+      "text": "오늘 루틴을 끝까지 완수했어! 다음 모험도 자신 있게 해낼 수 있어!"
     },
     {
       "id": "celebration-008",
       "trigger": "complete",
-      "text": "지유의 꾸준한 힘으로 오늘도 멋지게 이겼어!"
+      "text": "오늘 루틴을 끝까지 완수했어! 승리의 기쁨이 반짝반짝 빛나!"
     },
     {
       "id": "celebration-009",
       "trigger": "complete",
-      "text": "모든 체크가 반짝반짝! 지유가 해냈어!"
+      "text": "오늘 루틴을 끝까지 완수했어! 노력한 만큼 멋진 결과를 만들었어!"
     },
     {
       "id": "celebration-010",
       "trigger": "complete",
-      "text": "정말 잘했어! 오늘의 목표를 모두 이루었네!"
+      "text": "오늘 루틴을 끝까지 완수했어! 지유야, 정말 대단해! 해냈어!!!"
     },
     {
       "id": "celebration-011",
       "trigger": "complete",
-      "text": "지유야, 한 걸음씩 나아가더니 결국 전부 끝냈구나!"
+      "text": "몬스터의 도발을 이겨 내고 승리했어! 가슴이 벅찰 만큼 뿌듯해!"
     },
     {
       "id": "celebration-012",
       "trigger": "complete",
-      "text": "오늘도 약속한 루틴을 지켜냈어. 멋져!"
+      "text": "몬스터의 도발을 이겨 내고 승리했어! 이 기쁨을 마음껏 누릴래!"
     },
     {
       "id": "celebration-013",
       "trigger": "complete",
-      "text": "몬스터 퇴치 성공! 지유의 노력 덕분이야!"
+      "text": "몬스터의 도발을 이겨 내고 승리했어! 오늘의 나는 어제보다 더 강해!"
     },
     {
       "id": "celebration-014",
       "trigger": "complete",
-      "text": "모든 루틴 완료! 오늘 하루의 주인공은 지유야!"
+      "text": "몬스터의 도발을 이겨 내고 승리했어! 내 안에 용기와 자신감이 가득 차올라!"
     },
     {
       "id": "celebration-015",
       "trigger": "complete",
-      "text": "끝까지 해낸 지유에게 반짝 별을 선물할게!"
+      "text": "몬스터의 도발을 이겨 내고 승리했어! 나 자신에게 큰 박수를 보내자!"
     },
     {
       "id": "celebration-016",
       "trigger": "complete",
-      "text": "와아, 우리가 해냈어! 지유 덕분에 몬스터가 도망갔어!"
+      "text": "몬스터의 도발을 이겨 내고 승리했어! 이 성취감을 꼭 오래 기억할 거야!"
     },
     {
       "id": "celebration-017",
       "trigger": "complete",
-      "text": "루틴을 모두 마쳤어! 지유의 집중력이 정말 멋져!"
+      "text": "몬스터의 도발을 이겨 내고 승리했어! 다음 모험도 자신 있게 해낼 수 있어!"
     },
     {
       "id": "celebration-018",
       "trigger": "complete",
-      "text": "완료 체크가 가득 찼어! 하나씩 해낸 지유 최고!"
+      "text": "몬스터의 도발을 이겨 내고 승리했어! 승리의 기쁨이 반짝반짝 빛나!"
     },
     {
       "id": "celebration-019",
       "trigger": "complete",
-      "text": "오늘의 도전 성공! 지유의 노력에 박수를 보내!"
+      "text": "몬스터의 도발을 이겨 내고 승리했어! 노력한 만큼 멋진 결과를 만들었어!"
     },
     {
       "id": "celebration-020",
       "trigger": "complete",
-      "text": "지유야, 어려운 순간에도 계속 해낸 게 정말 대단해!"
+      "text": "몬스터의 도발을 이겨 내고 승리했어! 지유야, 정말 대단해! 해냈어!!!"
     },
     {
       "id": "celebration-021",
       "trigger": "complete",
-      "text": "하나하나 끝낸 루틴이 모여 멋진 승리가 되었어!"
+      "text": "체크 하나하나가 모여 멋진 완주가 됐어! 가슴이 벅찰 만큼 뿌듯해!"
     },
     {
       "id": "celebration-022",
       "trigger": "complete",
-      "text": "몬스터가 항복했어! 오늘은 지유가 이겼다!"
+      "text": "체크 하나하나가 모여 멋진 완주가 됐어! 이 기쁨을 마음껏 누릴래!"
     },
     {
       "id": "celebration-023",
       "trigger": "complete",
-      "text": "전부 완료라니! 지유의 오늘은 성공으로 반짝여!"
+      "text": "체크 하나하나가 모여 멋진 완주가 됐어! 오늘의 나는 어제보다 더 강해!"
     },
     {
       "id": "celebration-024",
       "trigger": "complete",
-      "text": "정말 멋져! 지유는 시작한 일을 끝까지 해내는구나!"
+      "text": "체크 하나하나가 모여 멋진 완주가 됐어! 내 안에 용기와 자신감이 가득 차올라!"
     },
     {
       "id": "celebration-025",
       "trigger": "complete",
-      "text": "미션 완료! 이제 마음 편히 뿌듯함을 즐겨도 돼!"
+      "text": "체크 하나하나가 모여 멋진 완주가 됐어! 나 자신에게 큰 박수를 보내자!"
     },
     {
       "id": "celebration-026",
       "trigger": "complete",
-      "text": "지유의 용기와 꾸준함이 오늘의 승리를 만들었어!"
+      "text": "체크 하나하나가 모여 멋진 완주가 됐어! 이 성취감을 꼭 오래 기억할 거야!"
     },
     {
       "id": "celebration-027",
       "trigger": "complete",
-      "text": "루틴을 모두 체크했어! 놀라운 집중력이야!"
+      "text": "체크 하나하나가 모여 멋진 완주가 됐어! 다음 모험도 자신 있게 해낼 수 있어!"
     },
     {
       "id": "celebration-028",
       "trigger": "complete",
-      "text": "오늘도 할 수 있다는 걸 보여줬네. 축하해!"
+      "text": "체크 하나하나가 모여 멋진 완주가 됐어! 승리의 기쁨이 반짝반짝 빛나!"
     },
     {
       "id": "celebration-029",
       "trigger": "complete",
-      "text": "지유가 해낸 모든 일이 반짝이는 별이 되었어!"
+      "text": "체크 하나하나가 모여 멋진 완주가 됐어! 노력한 만큼 멋진 결과를 만들었어!"
     },
     {
       "id": "celebration-030",
       "trigger": "complete",
-      "text": "몬스터 퇴치 완료! 팀의 최고 공로자는 지유야!"
+      "text": "체크 하나하나가 모여 멋진 완주가 됐어! 지유야, 정말 대단해! 해냈어!!!"
     },
     {
       "id": "celebration-031",
       "trigger": "complete",
-      "text": "우랏! 지유가 오늘의 루틴을 모두 정복했다!"
+      "text": "미루고 싶었던 순간도 이겨 냈어! 가슴이 벅찰 만큼 뿌듯해!"
     },
     {
       "id": "celebration-032",
       "trigger": "complete",
-      "text": "신난다! 지유의 체크 하나하나가 승리를 만들었어!"
+      "text": "미루고 싶었던 순간도 이겨 냈어! 이 기쁨을 마음껏 누릴래!"
     },
     {
       "id": "celebration-033",
       "trigger": "complete",
-      "text": "오늘 임무 성공! 우리 팀이 지유 덕에 강해졌어!"
+      "text": "미루고 싶었던 순간도 이겨 냈어! 오늘의 나는 어제보다 더 강해!"
     },
     {
       "id": "celebration-034",
       "trigger": "complete",
-      "text": "와아! 루틴 미션을 전부 클리어했어!"
+      "text": "미루고 싶었던 순간도 이겨 냈어! 내 안에 용기와 자신감이 가득 차올라!"
     },
     {
       "id": "celebration-035",
       "trigger": "complete",
-      "text": "지유야, 끝까지 해내는 모습이 정말 멋지다!"
+      "text": "미루고 싶었던 순간도 이겨 냈어! 나 자신에게 큰 박수를 보내자!"
     },
     {
       "id": "celebration-036",
       "trigger": "complete",
-      "text": "오늘의 몬스터는 지유의 꾸준함에 졌어!"
+      "text": "미루고 싶었던 순간도 이겨 냈어! 이 성취감을 꼭 오래 기억할 거야!"
     },
     {
       "id": "celebration-037",
       "trigger": "complete",
-      "text": "다 해냈다! 지유에게 우렁찬 박수를 보내자!"
+      "text": "미루고 싶었던 순간도 이겨 냈어! 다음 모험도 자신 있게 해낼 수 있어!"
     },
     {
       "id": "celebration-038",
       "trigger": "complete",
-      "text": "멋진 승리야! 지유는 오늘도 해낼 수 있는 사람이야!"
+      "text": "미루고 싶었던 순간도 이겨 냈어! 승리의 기쁨이 반짝반짝 빛나!"
     },
     {
       "id": "celebration-039",
       "trigger": "complete",
-      "text": "루틴 완료! 이제 기쁜 마음으로 쉬어도 좋아!"
+      "text": "미루고 싶었던 순간도 이겨 냈어! 노력한 만큼 멋진 결과를 만들었어!"
     },
     {
       "id": "celebration-040",
       "trigger": "complete",
-      "text": "마지막 체크까지 성공! 지유의 도전 정신 최고야!"
+      "text": "미루고 싶었던 순간도 이겨 냈어! 지유야, 정말 대단해! 해냈어!!!"
     },
     {
       "id": "celebration-041",
       "trigger": "complete",
-      "text": "우랏! 오늘의 미션을 모두 끝냈다!"
+      "text": "마지막 공격까지 해내며 몬스터를 쓰러뜨렸어! 가슴이 벅찰 만큼 뿌듯해!"
     },
     {
       "id": "celebration-042",
       "trigger": "complete",
-      "text": "지유가 만든 승리 기록 하나 추가! 정말 자랑스러워!"
+      "text": "마지막 공격까지 해내며 몬스터를 쓰러뜨렸어! 이 기쁨을 마음껏 누릴래!"
     },
     {
       "id": "celebration-043",
       "trigger": "complete",
-      "text": "힘차게 출발해서 멋지게 마무리했어. 축하해!"
+      "text": "마지막 공격까지 해내며 몬스터를 쓰러뜨렸어! 오늘의 나는 어제보다 더 강해!"
     },
     {
       "id": "celebration-044",
       "trigger": "complete",
-      "text": "모든 루틴 완료! 지유가 우리 팀의 영웅이야!"
+      "text": "마지막 공격까지 해내며 몬스터를 쓰러뜨렸어! 내 안에 용기와 자신감이 가득 차올라!"
     },
     {
       "id": "celebration-045",
       "trigger": "complete",
-      "text": "지유야, 오늘도 멋진 결과를 만들어냈구나!"
+      "text": "마지막 공격까지 해내며 몬스터를 쓰러뜨렸어! 나 자신에게 큰 박수를 보내자!"
     },
     {
       "id": "celebration-046",
       "trigger": "complete",
-      "text": "지유가 꾸준히 해낸 덕분에 몬스터 HP가 0이 됐어!"
+      "text": "마지막 공격까지 해내며 몬스터를 쓰러뜨렸어! 이 성취감을 꼭 오래 기억할 거야!"
     },
     {
       "id": "celebration-047",
       "trigger": "complete",
-      "text": "칭찬 받을 준비됐지? 오늘 루틴 전부 완료야!"
+      "text": "마지막 공격까지 해내며 몬스터를 쓰러뜨렸어! 다음 모험도 자신 있게 해낼 수 있어!"
     },
     {
       "id": "celebration-048",
       "trigger": "complete",
-      "text": "내가 응원한 보람이 있네! 정말 잘했어!"
+      "text": "마지막 공격까지 해내며 몬스터를 쓰러뜨렸어! 승리의 기쁨이 반짝반짝 빛나!"
     },
     {
       "id": "celebration-049",
       "trigger": "complete",
-      "text": "오늘의 목표를 이룬 지유, 아주 근사해!"
+      "text": "마지막 공격까지 해내며 몬스터를 쓰러뜨렸어! 노력한 만큼 멋진 결과를 만들었어!"
     },
     {
       "id": "celebration-050",
       "trigger": "complete",
-      "text": "작은 루틴이 큰 승리가 되었어. 축하해!"
+      "text": "마지막 공격까지 해내며 몬스터를 쓰러뜨렸어! 지유야, 정말 대단해! 해냈어!!!"
     },
     {
       "id": "celebration-051",
       "trigger": "complete",
-      "text": "모몽가가 인정할게! 지유, 오늘 꽤 멋졌어!"
+      "text": "내가 세운 약속을 오늘도 지켰어! 가슴이 벅찰 만큼 뿌듯해!"
     },
     {
       "id": "celebration-052",
       "trigger": "complete",
-      "text": "오늘 루틴 다 끝냈어? 지유 정말 잘했는데!"
+      "text": "내가 세운 약속을 오늘도 지켰어! 이 기쁨을 마음껏 누릴래!"
     },
     {
       "id": "celebration-053",
       "trigger": "complete",
-      "text": "몬스터도 지유 앞에서는 꼼짝 못했어!"
+      "text": "내가 세운 약속을 오늘도 지켰어! 오늘의 나는 어제보다 더 강해!"
     },
     {
       "id": "celebration-054",
       "trigger": "complete",
-      "text": "오늘의 승리는 지유가 가져가는 거야! 축하해!"
+      "text": "내가 세운 약속을 오늘도 지켰어! 내 안에 용기와 자신감이 가득 차올라!"
     },
     {
       "id": "celebration-055",
       "trigger": "complete",
-      "text": "노력한 만큼 멋진 완료 화면이 찾아왔어!"
+      "text": "내가 세운 약속을 오늘도 지켰어! 나 자신에게 큰 박수를 보내자!"
     },
     {
       "id": "celebration-056",
       "trigger": "complete",
-      "text": "다 해냈구나! 지유가 해낸 게 제일 기특해!"
+      "text": "내가 세운 약속을 오늘도 지켰어! 이 성취감을 꼭 오래 기억할 거야!"
     },
     {
       "id": "celebration-057",
       "trigger": "complete",
-      "text": "완료 체크가 예쁘게 모였어. 지유의 성실함 덕분이야!"
+      "text": "내가 세운 약속을 오늘도 지켰어! 다음 모험도 자신 있게 해낼 수 있어!"
     },
     {
       "id": "celebration-058",
       "trigger": "complete",
-      "text": "지유야, 오늘 할 일을 모두 마쳤어. 멋져!"
+      "text": "내가 세운 약속을 오늘도 지켰어! 승리의 기쁨이 반짝반짝 빛나!"
     },
     {
       "id": "celebration-059",
       "trigger": "complete",
-      "text": "멋진 마무리야! 이제 기분 좋게 쉬자!"
+      "text": "내가 세운 약속을 오늘도 지켰어! 노력한 만큼 멋진 결과를 만들었어!"
     },
     {
       "id": "celebration-060",
       "trigger": "complete",
-      "text": "지유의 힘으로 오늘의 몬스터를 물리쳤어!"
+      "text": "내가 세운 약속을 오늘도 지켰어! 지유야, 정말 대단해! 해냈어!!!"
     },
     {
       "id": "celebration-061",
       "trigger": "complete",
-      "text": "하아… 오늘 루틴을 전부 끝냈구나. 참 잘했어."
+      "text": "한 걸음씩 쌓은 노력이 멋진 승리로 이어졌어! 가슴이 벅찰 만큼 뿌듯해!"
     },
     {
       "id": "celebration-062",
       "trigger": "complete",
-      "text": "지유야, 해낸 일을 천천히 바라보며 뿌듯해하렴."
+      "text": "한 걸음씩 쌓은 노력이 멋진 승리로 이어졌어! 이 기쁨을 마음껏 누릴래!"
     },
     {
       "id": "celebration-063",
       "trigger": "complete",
-      "text": "꾸준히 하나씩 마친 덕분에 오늘도 성공했단다."
+      "text": "한 걸음씩 쌓은 노력이 멋진 승리로 이어졌어! 오늘의 나는 어제보다 더 강해!"
     },
     {
       "id": "celebration-064",
       "trigger": "complete",
-      "text": "모든 루틴 완료라니, 참 기특하고 대견하구나."
+      "text": "한 걸음씩 쌓은 노력이 멋진 승리로 이어졌어! 내 안에 용기와 자신감이 가득 차올라!"
     },
     {
       "id": "celebration-065",
       "trigger": "complete",
-      "text": "수고 많았어. 오늘의 노력은 분명 좋은 경험이 될 거야."
+      "text": "한 걸음씩 쌓은 노력이 멋진 승리로 이어졌어! 나 자신에게 큰 박수를 보내자!"
     },
     {
       "id": "celebration-066",
       "trigger": "complete",
-      "text": "몬스터도 물리치고 할 일도 끝냈네. 멋진 하루야!"
+      "text": "한 걸음씩 쌓은 노력이 멋진 승리로 이어졌어! 이 성취감을 꼭 오래 기억할 거야!"
     },
     {
       "id": "celebration-067",
       "trigger": "complete",
-      "text": "끝까지 해내는 마음이 지유의 큰 힘이란다."
+      "text": "한 걸음씩 쌓은 노력이 멋진 승리로 이어졌어! 다음 모험도 자신 있게 해낼 수 있어!"
     },
     {
       "id": "celebration-068",
       "trigger": "complete",
-      "text": "오늘도 스스로 정한 일을 모두 해냈구나. 축하해!"
+      "text": "한 걸음씩 쌓은 노력이 멋진 승리로 이어졌어! 승리의 기쁨이 반짝반짝 빛나!"
     },
     {
       "id": "celebration-069",
       "trigger": "complete",
-      "text": "잠깐 쉬면서 오늘의 성취를 즐겨도 좋단다."
+      "text": "한 걸음씩 쌓은 노력이 멋진 승리로 이어졌어! 노력한 만큼 멋진 결과를 만들었어!"
     },
     {
       "id": "celebration-070",
       "trigger": "complete",
-      "text": "하나씩 차곡차곡, 결국 모두 완료했네!"
+      "text": "한 걸음씩 쌓은 노력이 멋진 승리로 이어졌어! 지유야, 정말 대단해! 해냈어!!!"
     },
     {
       "id": "celebration-071",
       "trigger": "complete",
-      "text": "오늘 지유가 해낸 일들을 마음껏 자랑스러워하렴."
+      "text": "힘든 순간에도 포기하지 않고 마침내 해냈어! 가슴이 벅찰 만큼 뿌듯해!"
     },
     {
       "id": "celebration-072",
       "trigger": "complete",
-      "text": "정말 잘했다. 오늘의 루틴을 훌륭하게 마무리했어."
+      "text": "힘든 순간에도 포기하지 않고 마침내 해냈어! 이 기쁨을 마음껏 누릴래!"
     },
     {
       "id": "celebration-073",
       "trigger": "complete",
-      "text": "꾸준한 노력으로 멋진 승리를 만들었구나!"
+      "text": "힘든 순간에도 포기하지 않고 마침내 해냈어! 오늘의 나는 어제보다 더 강해!"
     },
     {
       "id": "celebration-074",
       "trigger": "complete",
-      "text": "지유야, 오늘도 차분히 끝까지 해냈단다."
+      "text": "힘든 순간에도 포기하지 않고 마침내 해냈어! 내 안에 용기와 자신감이 가득 차올라!"
     },
     {
       "id": "celebration-075",
       "trigger": "complete",
-      "text": "훌륭한 수련이었어! 모든 미션 완료를 축하해!"
+      "text": "힘든 순간에도 포기하지 않고 마침내 해냈어! 나 자신에게 큰 박수를 보내자!"
     },
     {
       "id": "celebration-076",
       "trigger": "complete",
-      "text": "오늘의 도전을 멋지게 끝냈어! 자랑스러워!"
+      "text": "힘든 순간에도 포기하지 않고 마침내 해냈어! 이 성취감을 꼭 오래 기억할 거야!"
     },
     {
       "id": "celebration-077",
       "trigger": "complete",
-      "text": "루틴 전부 완료! 지유의 노력 점수가 만점이야!"
+      "text": "힘든 순간에도 포기하지 않고 마침내 해냈어! 다음 모험도 자신 있게 해낼 수 있어!"
     },
     {
       "id": "celebration-078",
       "trigger": "complete",
-      "text": "한 번도 포기하지 않고 해냈구나. 큰 박수를 보낼게!"
+      "text": "힘든 순간에도 포기하지 않고 마침내 해냈어! 승리의 기쁨이 반짝반짝 빛나!"
     },
     {
       "id": "celebration-079",
       "trigger": "complete",
-      "text": "완료한 루틴이 지유의 자신감으로 차곡차곡 쌓였어!"
+      "text": "힘든 순간에도 포기하지 않고 마침내 해냈어! 노력한 만큼 멋진 결과를 만들었어!"
     },
     {
       "id": "celebration-080",
       "trigger": "complete",
-      "text": "멋진 결과야! 오늘의 연습이 빛을 발했어!"
+      "text": "힘든 순간에도 포기하지 않고 마침내 해냈어! 지유야, 정말 대단해! 해냈어!!!"
     },
     {
       "id": "celebration-081",
       "trigger": "complete",
-      "text": "지유야, 모두 끝냈으니 승리 포즈를 보여줘!"
+      "text": "오늘의 미션 올 클리어! 전부 해냈어! 가슴이 벅찰 만큼 뿌듯해!"
     },
     {
       "id": "celebration-082",
       "trigger": "complete",
-      "text": "루틴 완성! 우리 팀의 토벌 작전이 성공했어!"
+      "text": "오늘의 미션 올 클리어! 전부 해냈어! 이 기쁨을 마음껏 누릴래!"
     },
     {
       "id": "celebration-083",
       "trigger": "complete",
-      "text": "마지막까지 집중했구나. 아주 훌륭한 승리야!"
+      "text": "오늘의 미션 올 클리어! 전부 해냈어! 오늘의 나는 어제보다 더 강해!"
     },
     {
       "id": "celebration-084",
       "trigger": "complete",
-      "text": "지유의 끈기 덕분에 오늘 임무도 성공했어!"
+      "text": "오늘의 미션 올 클리어! 전부 해냈어! 내 안에 용기와 자신감이 가득 차올라!"
     },
     {
       "id": "celebration-085",
       "trigger": "complete",
-      "text": "오늘 쌓은 경험치는 지유 마음속에 오래 남을 거야!"
+      "text": "오늘의 미션 올 클리어! 전부 해냈어! 나 자신에게 큰 박수를 보내자!"
     },
     {
       "id": "celebration-086",
       "trigger": "complete",
-      "text": "모든 미션을 마쳤어! 멋진 집중력에 박수를 보내!"
+      "text": "오늘의 미션 올 클리어! 전부 해냈어! 이 성취감을 꼭 오래 기억할 거야!"
     },
     {
       "id": "celebration-087",
       "trigger": "complete",
-      "text": "지유야, 네가 해낸 일을 꼭 기억해줘. 정말 대단해!"
+      "text": "오늘의 미션 올 클리어! 전부 해냈어! 다음 모험도 자신 있게 해낼 수 있어!"
     },
     {
       "id": "celebration-088",
       "trigger": "complete",
-      "text": "축하해요, 지유야! 오늘 루틴을 모두 완료했어요!"
+      "text": "오늘의 미션 올 클리어! 전부 해냈어! 승리의 기쁨이 반짝반짝 빛나!"
     },
     {
       "id": "celebration-089",
       "trigger": "complete",
-      "text": "정말 잘했어요! 지유의 노력으로 멋진 승리를 했어요!"
+      "text": "오늘의 미션 올 클리어! 전부 해냈어! 노력한 만큼 멋진 결과를 만들었어!"
     },
     {
       "id": "celebration-090",
       "trigger": "complete",
-      "text": "모든 체크가 완료됐어요! 오늘도 최고예요!"
+      "text": "오늘의 미션 올 클리어! 전부 해냈어! 지유야, 정말 대단해! 해냈어!!!"
     },
     {
       "id": "celebration-091",
       "trigger": "complete",
-      "text": "지유와 함께해서 오늘의 미션도 성공했어요!"
+      "text": "끝까지 해낸 내가 정말 자랑스러워! 가슴이 벅찰 만큼 뿌듯해!"
     },
     {
       "id": "celebration-092",
       "trigger": "complete",
-      "text": "몬스터 퇴치 성공! 지유가 정말 자랑스러워요!"
+      "text": "끝까지 해낸 내가 정말 자랑스러워! 이 기쁨을 마음껏 누릴래!"
     },
     {
       "id": "celebration-093",
       "trigger": "complete",
-      "text": "하나씩 해낸 지유에게 큰 박수를 보내요!"
+      "text": "끝까지 해낸 내가 정말 자랑스러워! 오늘의 나는 어제보다 더 강해!"
     },
     {
       "id": "celebration-094",
       "trigger": "complete",
-      "text": "오늘의 목표를 모두 이루었어요. 마음껏 기뻐해요!"
+      "text": "끝까지 해낸 내가 정말 자랑스러워! 내 안에 용기와 자신감이 가득 차올라!"
     },
     {
       "id": "celebration-095",
       "trigger": "complete",
-      "text": "끝까지 해낸 지유, 참 멋지고 대단해요!"
+      "text": "끝까지 해낸 내가 정말 자랑스러워! 나 자신에게 큰 박수를 보내자!"
     },
     {
       "id": "celebration-096",
       "trigger": "complete",
-      "text": "루틴 완료! 이제 뿌듯한 마음으로 쉬어도 돼요!"
+      "text": "끝까지 해낸 내가 정말 자랑스러워! 이 성취감을 꼭 오래 기억할 거야!"
     },
     {
       "id": "celebration-097",
       "trigger": "complete",
-      "text": "오늘의 노력은 별처럼 반짝반짝 빛나요!"
+      "text": "끝까지 해낸 내가 정말 자랑스러워! 다음 모험도 자신 있게 해낼 수 있어!"
     },
     {
       "id": "celebration-098",
       "trigger": "complete",
-      "text": "지유의 성실함이 오늘의 승리를 만들었어요!"
+      "text": "끝까지 해낸 내가 정말 자랑스러워! 승리의 기쁨이 반짝반짝 빛나!"
     },
     {
       "id": "celebration-099",
       "trigger": "complete",
-      "text": "멋진 하루예요! 루틴을 모두 마쳤어요!"
+      "text": "끝까지 해낸 내가 정말 자랑스러워! 노력한 만큼 멋진 결과를 만들었어!"
     },
     {
       "id": "celebration-100",
       "trigger": "complete",
-      "text": "오늘도 해낼 수 있다는 걸 보여줬네요. 축하해요!"
+      "text": "끝까지 해낸 내가 정말 자랑스러워! 지유야, 정말 대단해! 해냈어!!!"
     }
   ]
 }

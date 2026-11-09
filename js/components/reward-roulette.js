@@ -35,6 +35,16 @@ template.innerHTML = `
     .result-title { margin: 0; color: #65477d; font-size: 1rem; font-weight: 900; }
     .result-description { margin: 5px 0 0; color: #716378; font-size: .82rem; line-height: 1.45; }
     .games-title { margin: 0; color: #765984; font-size: .88rem; font-weight: 900; }
+    .edit-toggle, .edit-action { min-height: 36px; padding: 7px 10px; border: 1px solid #dfcce7; border-radius: 10px; background: #fff; color: #684b76; font: inherit; font-size: .8rem; font-weight: 800; cursor: pointer; }
+    [hidden] { display: none !important; }
+    .editor { display: grid; gap: 8px; max-height: 260px; overflow: auto; padding: 2px; }
+    .editor-row { display: grid; grid-template-columns: 1fr auto; gap: 6px; padding: 8px; border: 1px solid #ead8f0; border-radius: 12px; background: rgb(255 255 255 / 82%); }
+    .editor-fields { display: grid; gap: 5px; }
+    .editor input, .editor textarea { width: 100%; box-sizing: border-box; padding: 7px; border: 1px solid #dfd2e3; border-radius: 8px; font: inherit; font-size: .78rem; }
+    .editor textarea { min-height: 52px; resize: vertical; }
+    .editor-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+    .editor-actions .save { background: #755bc6; color: #fff; }
+    .edit-action.delete { align-self: center; color: #a23e58; }
     .game-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
     .game-option { min-height: 45px; padding: 8px 9px; border: 1px solid #e6d8e9; border-radius: 12px; background: rgb(255 255 255 / 84%); color: #67536c; font: inherit; font-size: .8rem; font-weight: 800; line-height: 1.25; cursor: pointer; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; }
     .game-option:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 5px 12px rgb(102 73 118 / 15%); }
@@ -77,6 +87,9 @@ template.innerHTML = `
         <section class="side">
           <div class="result" role="status" aria-live="polite"><p class="result-title">어떤 놀이가 나올까요?</p><p class="result-description">무작위로 돌리거나, 하고 싶은 놀이를 골라 돌려보세요.</p></div>
           <p class="games-title">직접 고르고 싶다면</p>
+          <button type="button" class="edit-toggle">룰렛 항목 수정</button>
+          <div class="editor" hidden aria-label="룰렛 항목 편집"></div>
+          <div class="editor-actions" hidden><button type="button" class="edit-action add">항목 추가</button><button type="button" class="edit-action save">저장</button><button type="button" class="edit-action cancel">취소</button></div>
           <div class="game-list" role="group" aria-label="직접 선택할 놀이"></div>
           <div class="controls">
             <button type="button" class="spin spin-random">🎡 무작위 스핀</button>
@@ -102,6 +115,7 @@ class RewardRoulette extends HTMLElement {
     this._selectedId = null;
     this._spinning = false;
     this._spinningGame = null;
+    this._editing = false;
     this._dialog.addEventListener("click", (event) => {
       if (event.target === this._dialog) this._dialog.close();
     });
@@ -109,6 +123,10 @@ class RewardRoulette extends HTMLElement {
     this.shadowRoot.querySelector(".start").addEventListener("click", () => this._dialog.close());
     this.shadowRoot.querySelector(".spin-random").addEventListener("click", () => this.spinRandom());
     this.shadowRoot.querySelector(".spin-selected").addEventListener("click", () => this.spinSelected());
+    this.shadowRoot.querySelector(".edit-toggle").addEventListener("click", () => this.beginEdit());
+    this.shadowRoot.querySelector(".editor-actions .add").addEventListener("click", () => this.addGame());
+    this.shadowRoot.querySelector(".editor-actions .save").addEventListener("click", () => this.saveEdit());
+    this.shadowRoot.querySelector(".editor-actions .cancel").addEventListener("click", () => this.cancelEdit());
   }
 
   show(games) {
@@ -205,6 +223,87 @@ class RewardRoulette extends HTMLElement {
       option.addEventListener("click", () => this.selectGame(game));
       list.append(option);
     });
+  }
+
+  beginEdit() {
+    if (this._spinning || this._games.length === 0) return;
+    this._editing = true;
+    this._draftGames = this._games.map((game) => ({ ...game }));
+    this.renderEditor();
+    this.shadowRoot.querySelector(".editor").hidden = false;
+    this.shadowRoot.querySelector(".editor-actions").hidden = false;
+    this.shadowRoot.querySelector(".game-list").hidden = true;
+    this.shadowRoot.querySelector(".edit-toggle").hidden = true;
+  }
+
+  renderEditor() {
+    const editor = this.shadowRoot.querySelector(".editor");
+    editor.replaceChildren();
+    this._draftGames.forEach((game, index) => {
+      const row = document.createElement("div");
+      row.className = "editor-row";
+      const fields = document.createElement("div");
+      fields.className = "editor-fields";
+      const title = document.createElement("input");
+      title.value = game.title;
+      title.maxLength = 32;
+      title.setAttribute("aria-label", `항목 ${index + 1} 이름`);
+      title.placeholder = "항목 이름";
+      title.addEventListener("input", () => { game.title = title.value; });
+      const description = document.createElement("textarea");
+      description.value = game.description;
+      description.maxLength = 180;
+      description.setAttribute("aria-label", `항목 ${index + 1} 설명`);
+      description.placeholder = "설명";
+      description.addEventListener("input", () => { game.description = description.value; });
+      fields.append(title, description);
+      const remove = document.createElement("button");
+      remove.type = "button";
+      remove.className = "edit-action delete";
+      remove.textContent = "삭제";
+      remove.addEventListener("click", () => {
+        if (this._draftGames.length <= 2) return;
+        this._draftGames.splice(index, 1);
+        this.renderEditor();
+      });
+      row.append(fields, remove);
+      editor.append(row);
+    });
+  }
+
+  addGame() {
+    this._draftGames.push({ id: `custom-${Date.now()}`, title: "새 놀이", description: "함께 즐길 놀이를 적어주세요." });
+    this.renderEditor();
+    this.shadowRoot.querySelector(".editor").lastElementChild?.querySelector("input")?.focus();
+  }
+
+  saveEdit() {
+    const games = this._draftGames.map((game) => ({ ...game, title: game.title.trim(), description: game.description.trim() }));
+    if (games.length < 2 || games.some((game) => !game.title || !game.description)) {
+      this.setResult("항목을 확인해 주세요", "항목은 2개 이상이어야 하며 이름과 설명을 모두 입력해야 해요.", false);
+      return;
+    }
+    const ids = new Set();
+    games.forEach((game, index) => {
+      if (!game.id || ids.has(game.id)) game.id = `custom-${Date.now()}-${index}`;
+      ids.add(game.id);
+    });
+    this._games = games;
+    this.renderWheel();
+    this.renderChoices();
+    this.finishEdit();
+    this.setResult("룰렛 항목을 저장했어요", "수정한 항목으로 룰렛을 돌릴 수 있어요.", false);
+    this.dispatchEvent(new CustomEvent("games-change", { detail: { games: this._games }, bubbles: true, composed: true }));
+  }
+
+  cancelEdit() { this.finishEdit(); }
+
+  finishEdit() {
+    this._editing = false;
+    this.shadowRoot.querySelector(".editor").hidden = true;
+    this.shadowRoot.querySelector(".editor-actions").hidden = true;
+    this.shadowRoot.querySelector(".game-list").hidden = false;
+    this.shadowRoot.querySelector(".edit-toggle").hidden = false;
   }
 
   selectGame(game) {

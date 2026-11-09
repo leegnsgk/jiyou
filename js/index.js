@@ -12,6 +12,7 @@ const MONSTER_MESSAGES_URL = new URL("../data/monsterMessages.json", import.meta
 const REWARD_GAMES_URL = new URL("../data/rewardGames.json", import.meta.url);
 const SCHEDULE_URL = new URL("../data/defaultSchedule.json", import.meta.url);
 const SCHEDULE_STORAGE_KEY = "chiikawaDailyRoutine.schedule";
+const REWARD_GAMES_STORAGE_KEY = "chiikawaDailyRoutine.rewardGames";
 const battleIntro = document.querySelector("#battleIntro");
 const routineList = document.querySelector("#routineList");
 const celebrationLayer = document.querySelector("#celebrationLayer");
@@ -101,7 +102,19 @@ async function initialize() {
     const celebrationData = await celebrationResponse.json();
     celebrationMessages = celebrationData.messages;
     const rewardGamesData = await rewardGamesResponse.json();
-    rewardGames = rewardGamesData.games;
+    const defaultRewardGames = rewardGamesData.games;
+    try {
+      const savedGames = localStorage.getItem(REWARD_GAMES_STORAGE_KEY);
+      const parsedGames = savedGames ? JSON.parse(savedGames) : null;
+      rewardGames = Array.isArray(parsedGames) && parsedGames.length >= 2 && parsedGames.every((game) => game && typeof game.id === "string" && typeof game.title === "string" && game.title.trim() && typeof game.description === "string" && game.description.trim())
+        ? parsedGames
+        : defaultRewardGames;
+      if (!savedGames || rewardGames === defaultRewardGames) localStorage.setItem(REWARD_GAMES_STORAGE_KEY, JSON.stringify(defaultRewardGames));
+    } catch (storageError) {
+      console.warn("저장된 룰렛 항목을 읽지 못해 기본 항목을 사용해요.", storageError);
+      rewardGames = defaultRewardGames;
+      try { localStorage.setItem(REWARD_GAMES_STORAGE_KEY, JSON.stringify(defaultRewardGames)); } catch (writeError) { console.warn("기본 룰렛 항목을 저장하지 못했어요.", writeError); }
+    }
     if (!Array.isArray(messageData.messages) || messageData.messages.length === 0) {
       throw new Error("표시할 응원 메시지가 없어요.");
     }
@@ -117,8 +130,8 @@ async function initialize() {
     if (!Array.isArray(celebrationMessages) || celebrationMessages.length === 0) {
       throw new Error("표시할 축하 메시지가 없어요.");
     }
-    if (!Array.isArray(rewardGames) || rewardGames.length !== 8) {
-      throw new Error("보상 놀이 8개를 불러오지 못했어요.");
+    if (!Array.isArray(rewardGames) || rewardGames.length < 2) {
+      throw new Error("보상 놀이를 2개 이상 불러오지 못했어요.");
     }
 
     characters = charactersData.characters.map((character) => ({
@@ -148,6 +161,15 @@ routineList.addEventListener("routine-complete", (event) => {
   celebrationLayer.show(celebrationMessages, event.detail.character);
 });
 celebrationLayer.addEventListener("celebration-confirmed", () => rewardRoulette.show(rewardGames));
+rewardRoulette.addEventListener("games-change", (event) => {
+  rewardGames = event.detail.games;
+  try {
+    localStorage.setItem(REWARD_GAMES_STORAGE_KEY, JSON.stringify(rewardGames));
+  } catch (storageError) {
+    console.error("룰렛 항목을 저장하지 못했어요.", storageError);
+    status.textContent = "룰렛 항목을 저장하지 못했어요. 브라우저 저장 공간을 확인해 주세요.";
+  }
+});
 routineList.addEventListener("routine-change", (event) => {
   schedule[event.detail.dayKey] = event.detail.tasks;
   localStorage.setItem(SCHEDULE_STORAGE_KEY, JSON.stringify(schedule));

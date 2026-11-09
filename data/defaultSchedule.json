@@ -1,0 +1,226 @@
+{
+  "Monday": [
+    {
+      "text": "원리샘1일차",
+      "id": "default-1-1",
+      "done": false,
+      "sortOrder": 1
+    },
+    {
+      "text": "플라토1장",
+      "id": "default-1-2",
+      "done": false,
+      "sortOrder": 2
+    },
+    {
+      "text": "브릭스유닛1",
+      "id": "default-1-3",
+      "done": false,
+      "sortOrder": 3
+    },
+    {
+      "text": "화상영어6시",
+      "id": "default-1-4",
+      "done": false,
+      "sortOrder": 4
+    },
+    {
+      "text": "뿌독1단원",
+      "id": "default-1-5",
+      "done": false,
+      "sortOrder": 5
+    },
+    {
+      "text": "피아노연습",
+      "id": "default-1-6",
+      "done": false,
+      "sortOrder": 6
+    }
+  ],
+  "Tuesday": [
+    {
+      "text": "원리샘1일차",
+      "id": "default-2-1",
+      "done": false,
+      "sortOrder": 1
+    },
+    {
+      "text": "디딤돌1장",
+      "id": "default-2-2",
+      "done": false,
+      "sortOrder": 2
+    },
+    {
+      "text": "기적의영문장1스텝",
+      "id": "default-2-3",
+      "done": false,
+      "sortOrder": 3
+    },
+    {
+      "text": "화상영어6시",
+      "id": "default-2-4",
+      "done": false,
+      "sortOrder": 4
+    },
+    {
+      "text": "문해력어휘1단원",
+      "id": "default-2-5",
+      "done": false,
+      "sortOrder": 5
+    },
+    {
+      "text": "피아노연습",
+      "id": "default-2-6",
+      "done": false,
+      "sortOrder": 6
+    }
+  ],
+  "Wednesday": [
+    {
+      "text": "리틀팍스30분",
+      "id": "default-3-1",
+      "done": false,
+      "sortOrder": 1
+    },
+    {
+      "text": "피아노연습",
+      "id": "default-3-2",
+      "done": false,
+      "sortOrder": 2
+    }
+  ],
+  "Thursday": [
+    {
+      "text": "원리샘1일차",
+      "id": "default-4-1",
+      "done": false,
+      "sortOrder": 1
+    },
+    {
+      "text": "플라토1장",
+      "id": "default-4-2",
+      "done": false,
+      "sortOrder": 2
+    },
+    {
+      "text": "브릭스유닛1",
+      "id": "default-4-3",
+      "done": false,
+      "sortOrder": 3
+    },
+    {
+      "text": "화상영어6시",
+      "id": "default-4-4",
+      "done": false,
+      "sortOrder": 4
+    },
+    {
+      "text": "문해력한문장1장",
+      "id": "default-4-5",
+      "done": false,
+      "sortOrder": 5
+    },
+    {
+      "text": "피아노연습",
+      "id": "default-4-6",
+      "done": false,
+      "sortOrder": 6
+    }
+  ],
+  "Friday": [
+    {
+      "text": "원리샘1일차",
+      "id": "default-5-1",
+      "done": false,
+      "sortOrder": 1
+    },
+    {
+      "text": "디딤돌1장",
+      "id": "default-5-2",
+      "done": false,
+      "sortOrder": 2
+    },
+    {
+      "text": "기적의영문장1스텝",
+      "id": "default-5-3",
+      "done": false,
+      "sortOrder": 3
+    },
+    {
+      "text": "리틀팍스30분",
+      "id": "default-5-4",
+      "done": false,
+      "sortOrder": 4
+    },
+    {
+      "text": "뿌독1단원",
+      "id": "default-5-5",
+      "done": false,
+      "sortOrder": 5
+    },
+    {
+      "text": "피아노연습",
+      "id": "default-5-6",
+      "done": false,
+      "sortOrder": 6
+    }
+  ],
+  "Saturday": [
+    {
+      "text": "원리샘1일차",
+      "id": "default-6-1",
+      "done": false,
+      "sortOrder": 1
+    },
+    {
+      "text": "플라토1장",
+      "id": "default-6-2",
+      "done": false,
+      "sortOrder": 2
+    },
+    {
+      "text": "브릭스유닛1",
+      "id": "default-6-3",
+      "done": false,
+      "sortOrder": 3
+    },
+    {
+      "text": "리틀팍스30분",
+      "id": "default-6-4",
+      "done": false,
+      "sortOrder": 4
+    },
+    {
+      "text": "문해력어휘1단원",
+      "id": "default-6-5",
+      "done": false,
+      "sortOrder": 5
+    },
+    {
+      "text": "피아노연습",
+      "id": "default-6-6",
+      "done": false,
+      "sortOrder": 6
+    }
+  ],
+  "Sunday": [
+    {
+      "text": "원리샘1일차",
+      "id": "default-7-1",
+      "done": false,
+      "sortOrder": 1
+    },
+    {
+      "text": "리틀팍스30분",
+      "id": "default-7-2",
+      "done": false,
+      "sortOrder": 2
+    },
+    {
+      "text": "문해력한문장1장",
+      "id": "default-7-3",
+      "done": false,
+      "sortOrder": 3
+    }
+  ]
+}

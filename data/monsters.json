@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "description": "루틴 완료 전투에 등장하는 몬스터 정보",
+  "monsters": [
+    { "name": "마녀", "image": "../assets/images/monsters/마녀.png" },
+    { "name": "곤충 두발", "image": "../assets/images/monsters/곤충_두발.png" },
+    { "name": "구쵸키파 의태형", "image": "../assets/images/monsters/구쵸키파_의태형_포켓공개.png" },
+    { "name": "곤충 육발", "image": "../assets/images/monsters/곤충_육발.png" },
+    { "name": "큰새", "image": "../assets/images/monsters/큰새_포켓공개.png" },
+    { "name": "곤충 뿔", "image": "../assets/images/monsters/곤충_뿔.png" },
+    { "name": "키메라", "image": "../assets/images/monsters/키메라_포켓공개.png" },
+    { "name": "중지괴물", "image": "../assets/images/monsters/중지괴물.png" },
+    { "name": "복어", "image": "../assets/images/monsters/복어_포켓공개.png" },
+    { "name": "코끼리괴물", "image": "../assets/images/monsters/코끼리괴물.png" }
+  ]
+}

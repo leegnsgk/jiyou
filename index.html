@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8ef">
+  <title>지유의 먼작귀 루틴 모험</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script type="module" src="./js/index.js"></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header">
+      <p class="kicker">CHIikawa Daily Routine</p>
+      <h1>지유의 루틴 모험</h1>
+      <p class="intro">오늘도 먼작귀 친구와 함께 한 걸음씩 나아가요.</p>
+      <button id="adventureMapButton" class="map-open-button" type="button">모험 지도 보기 <span aria-hidden="true">☆</span></button>
+    </header>
+
+    <section class="mission-panel" aria-labelledby="mission-title">
+      <div class="mission-heading">
+        <span class="sparkle" aria-hidden="true">✦</span>
+        <div>
+          <p class="section-label">오늘의 대결</p>
+          <h2 id="mission-title">몬스터가 나타났어요!</h2>
+        </div>
+      </div>
+
+      <p id="status" class="status" role="status">캐릭터와 함께 몬스터를 물리쳐 보세요!</p>
+      <battle-intro id="battleIntro"></battle-intro>
+      <button id="confirmButton" class="action-button" type="button" disabled>대결 시작</button>
+      <routine-list id="routineList" hidden></routine-list>
+    </section>
+
+
+
+    <footer class="page-footer">오늘의 작은 실천이 모여 큰 용기가 돼요.</footer>
+  </main>
+  <adventure-map id="adventureMap"></adventure-map>
+  <celebration-message id="celebrationLayer"></celebration-message>
+</body>
+</html>
+
+
+

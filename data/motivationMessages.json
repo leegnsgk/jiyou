@@ -1,0 +1,506 @@
+{
+  "version": 1,
+  "description": "캐릭터가 몬스터와 대결할 때 보여줄 응수 메시지",
+  "messages": [
+    {
+      "id": "motivation-001",
+      "trigger": "encounter",
+      "text": "질 수 없지!!! 내가 상대해 주마!! 각오해라!!! 지유야!!! 도와줘!!!"
+    },
+    {
+      "id": "motivation-002",
+      "trigger": "encounter",
+      "text": "질 수 없지!!! 내가 상대해 주마!! 받아라, 나의 필살기! 지유야!!! 몬스터를 함께 물리치자!!!"
+    },
+    {
+      "id": "motivation-003",
+      "trigger": "encounter",
+      "text": "질 수 없지!!! 내가 상대해 주마!! 승리할 때까지 간다! 지유야!!! 내 편이 되어 줘!!!"
+    },
+    {
+      "id": "motivation-004",
+      "trigger": "encounter",
+      "text": "질 수 없지!!! 내가 상대해 주마!! 절대 포기하지 않아! 지유야!!! 마지막 공격을 도와줘!!!"
+    },
+    {
+      "id": "motivation-005",
+      "trigger": "encounter",
+      "text": "질 수 없지!!! 내가 상대해 주마!! 내 집중력은 철벽이야! 지유야!!! 우리 팀을 지켜줘!!!"
+    },
+    {
+      "id": "motivation-006",
+      "trigger": "encounter",
+      "text": "질 수 없지!!! 내가 상대해 주마!! 오늘의 승부는 내가 가져간다! 지유야!!! 용기를 나눠 줘!!!"
+    },
+    {
+      "id": "motivation-007",
+      "trigger": "encounter",
+      "text": "질 수 없지!!! 내가 상대해 주마!! 내 친구와 루틴은 내가 지켜! 지유야!!! 지금 힘을 보태 줘!!!"
+    },
+    {
+      "id": "motivation-008",
+      "trigger": "encounter",
+      "text": "질 수 없지!!! 내가 상대해 주마!! 방해 공격은 통하지 않아! 지유야!!! 나와 함께 맞서 줘!!!"
+    },
+    {
+      "id": "motivation-009",
+      "trigger": "encounter",
+      "text": "질 수 없지!!! 내가 상대해 주마!! 끝까지 상대해 주마! 지유야!!! 승리를 함께 만들어 줘!!!"
+    },
+    {
+      "id": "motivation-010",
+      "trigger": "encounter",
+      "text": "질 수 없지!!! 내가 상대해 주마!! 준비됐으면 정면으로 덤벼! 지유야!!! 끝까지 응원해 줘!!!"
+    },
+    {
+      "id": "motivation-011",
+      "trigger": "encounter",
+      "text": "좋아, 덤벼라 몬스터! 각오해라!!! 지유야아!!! 도와줘!!!"
+    },
+    {
+      "id": "motivation-012",
+      "trigger": "encounter",
+      "text": "좋아, 덤벼라 몬스터! 받아라, 나의 필살기! 지유야아!!! 몬스터를 함께 물리치자!!!"
+    },
+    {
+      "id": "motivation-013",
+      "trigger": "encounter",
+      "text": "좋아, 덤벼라 몬스터! 승리할 때까지 간다! 지유야아!!! 내 편이 되어 줘!!!"
+    },
+    {
+      "id": "motivation-014",
+      "trigger": "encounter",
+      "text": "좋아, 덤벼라 몬스터! 절대 포기하지 않아! 지유야아!!! 마지막 공격을 도와줘!!!"
+    },
+    {
+      "id": "motivation-015",
+      "trigger": "encounter",
+      "text": "좋아, 덤벼라 몬스터! 내 집중력은 철벽이야! 지유야아!!! 우리 팀을 지켜줘!!!"
+    },
+    {
+      "id": "motivation-016",
+      "trigger": "encounter",
+      "text": "좋아, 덤벼라 몬스터! 오늘의 승부는 내가 가져간다! 지유야아!!! 용기를 나눠 줘!!!"
+    },
+    {
+      "id": "motivation-017",
+      "trigger": "encounter",
+      "text": "좋아, 덤벼라 몬스터! 내 친구와 루틴은 내가 지켜! 지유야아!!! 지금 힘을 보태 줘!!!"
+    },
+    {
+      "id": "motivation-018",
+      "trigger": "encounter",
+      "text": "좋아, 덤벼라 몬스터! 방해 공격은 통하지 않아! 지유야아!!! 나와 함께 맞서 줘!!!"
+    },
+    {
+      "id": "motivation-019",
+      "trigger": "encounter",
+      "text": "좋아, 덤벼라 몬스터! 끝까지 상대해 주마! 지유야아!!! 승리를 함께 만들어 줘!!!"
+    },
+    {
+      "id": "motivation-020",
+      "trigger": "encounter",
+      "text": "좋아, 덤벼라 몬스터! 준비됐으면 정면으로 덤벼! 지유야아!!! 끝까지 응원해 줘!!!"
+    },
+    {
+      "id": "motivation-021",
+      "trigger": "encounter",
+      "text": "오늘은 절대 물러서지 않아! 각오해라!!! 지유야, 도와줘!!! 도와줘!!!"
+    },
+    {
+      "id": "motivation-022",
+      "trigger": "encounter",
+      "text": "오늘은 절대 물러서지 않아! 받아라, 나의 필살기! 지유야, 도와줘!!! 몬스터를 함께 물리치자!!!"
+    },
+    {
+      "id": "motivation-023",
+      "trigger": "encounter",
+      "text": "오늘은 절대 물러서지 않아! 승리할 때까지 간다! 지유야, 도와줘!!! 내 편이 되어 줘!!!"
+    },
+    {
+      "id": "motivation-024",
+      "trigger": "encounter",
+      "text": "오늘은 절대 물러서지 않아! 절대 포기하지 않아! 지유야, 도와줘!!! 마지막 공격을 도와줘!!!"
+    },
+    {
+      "id": "motivation-025",
+      "trigger": "encounter",
+      "text": "오늘은 절대 물러서지 않아! 내 집중력은 철벽이야! 지유야, 도와줘!!! 우리 팀을 지켜줘!!!"
+    },
+    {
+      "id": "motivation-026",
+      "trigger": "encounter",
+      "text": "오늘은 절대 물러서지 않아! 오늘의 승부는 내가 가져간다! 지유야, 도와줘!!! 용기를 나눠 줘!!!"
+    },
+    {
+      "id": "motivation-027",
+      "trigger": "encounter",
+      "text": "오늘은 절대 물러서지 않아! 내 친구와 루틴은 내가 지켜! 지유야, 도와줘!!! 지금 힘을 보태 줘!!!"
+    },
+    {
+      "id": "motivation-028",
+      "trigger": "encounter",
+      "text": "오늘은 절대 물러서지 않아! 방해 공격은 통하지 않아! 지유야, 도와줘!!! 나와 함께 맞서 줘!!!"
+    },
+    {
+      "id": "motivation-029",
+      "trigger": "encounter",
+      "text": "오늘은 절대 물러서지 않아! 끝까지 상대해 주마! 지유야, 도와줘!!! 승리를 함께 만들어 줘!!!"
+    },
+    {
+      "id": "motivation-030",
+      "trigger": "encounter",
+      "text": "오늘은 절대 물러서지 않아! 준비됐으면 정면으로 덤벼! 지유야, 도와줘!!! 끝까지 응원해 줘!!!"
+    },
+    {
+      "id": "motivation-031",
+      "trigger": "encounter",
+      "text": "내 용기를 얕보지 마! 각오해라!!! 지유야!!! 나 여기 있어!!! 도와줘!!!"
+    },
+    {
+      "id": "motivation-032",
+      "trigger": "encounter",
+      "text": "내 용기를 얕보지 마! 받아라, 나의 필살기! 지유야!!! 나 여기 있어!!! 몬스터를 함께 물리치자!!!"
+    },
+    {
+      "id": "motivation-033",
+      "trigger": "encounter",
+      "text": "내 용기를 얕보지 마! 승리할 때까지 간다! 지유야!!! 나 여기 있어!!! 내 편이 되어 줘!!!"
+    },
+    {
+      "id": "motivation-034",
+      "trigger": "encounter",
+      "text": "내 용기를 얕보지 마! 절대 포기하지 않아! 지유야!!! 나 여기 있어!!! 마지막 공격을 도와줘!!!"
+    },
+    {
+      "id": "motivation-035",
+      "trigger": "encounter",
+      "text": "내 용기를 얕보지 마! 내 집중력은 철벽이야! 지유야!!! 나 여기 있어!!! 우리 팀을 지켜줘!!!"
+    },
+    {
+      "id": "motivation-036",
+      "trigger": "encounter",
+      "text": "내 용기를 얕보지 마! 오늘의 승부는 내가 가져간다! 지유야!!! 나 여기 있어!!! 용기를 나눠 줘!!!"
+    },
+    {
+      "id": "motivation-037",
+      "trigger": "encounter",
+      "text": "내 용기를 얕보지 마! 내 친구와 루틴은 내가 지켜! 지유야!!! 나 여기 있어!!! 지금 힘을 보태 줘!!!"
+    },
+    {
+      "id": "motivation-038",
+      "trigger": "encounter",
+      "text": "내 용기를 얕보지 마! 방해 공격은 통하지 않아! 지유야!!! 나 여기 있어!!! 나와 함께 맞서 줘!!!"
+    },
+    {
+      "id": "motivation-039",
+      "trigger": "encounter",
+      "text": "내 용기를 얕보지 마! 끝까지 상대해 주마! 지유야!!! 나 여기 있어!!! 승리를 함께 만들어 줘!!!"
+    },
+    {
+      "id": "motivation-040",
+      "trigger": "encounter",
+      "text": "내 용기를 얕보지 마! 준비됐으면 정면으로 덤벼! 지유야!!! 나 여기 있어!!! 끝까지 응원해 줘!!!"
+    },
+    {
+      "id": "motivation-041",
+      "trigger": "encounter",
+      "text": "친구들을 지키기 위해 싸우겠어! 각오해라!!! 지유야!!! 어서 와 줘!!! 도와줘!!!"
+    },
+    {
+      "id": "motivation-042",
+      "trigger": "encounter",
+      "text": "친구들을 지키기 위해 싸우겠어! 받아라, 나의 필살기! 지유야!!! 어서 와 줘!!! 몬스터를 함께 물리치자!!!"
+    },
+    {
+      "id": "motivation-043",
+      "trigger": "encounter",
+      "text": "친구들을 지키기 위해 싸우겠어! 승리할 때까지 간다! 지유야!!! 어서 와 줘!!! 내 편이 되어 줘!!!"
+    },
+    {
+      "id": "motivation-044",
+      "trigger": "encounter",
+      "text": "친구들을 지키기 위해 싸우겠어! 절대 포기하지 않아! 지유야!!! 어서 와 줘!!! 마지막 공격을 도와줘!!!"
+    },
+    {
+      "id": "motivation-045",
+      "trigger": "encounter",
+      "text": "친구들을 지키기 위해 싸우겠어! 내 집중력은 철벽이야! 지유야!!! 어서 와 줘!!! 우리 팀을 지켜줘!!!"
+    },
+    {
+      "id": "motivation-046",
+      "trigger": "encounter",
+      "text": "친구들을 지키기 위해 싸우겠어! 오늘의 승부는 내가 가져간다! 지유야!!! 어서 와 줘!!! 용기를 나눠 줘!!!"
+    },
+    {
+      "id": "motivation-047",
+      "trigger": "encounter",
+      "text": "친구들을 지키기 위해 싸우겠어! 내 친구와 루틴은 내가 지켜! 지유야!!! 어서 와 줘!!! 지금 힘을 보태 줘!!!"
+    },
+    {
+      "id": "motivation-048",
+      "trigger": "encounter",
+      "text": "친구들을 지키기 위해 싸우겠어! 방해 공격은 통하지 않아! 지유야!!! 어서 와 줘!!! 나와 함께 맞서 줘!!!"
+    },
+    {
+      "id": "motivation-049",
+      "trigger": "encounter",
+      "text": "친구들을 지키기 위해 싸우겠어! 끝까지 상대해 주마! 지유야!!! 어서 와 줘!!! 승리를 함께 만들어 줘!!!"
+    },
+    {
+      "id": "motivation-050",
+      "trigger": "encounter",
+      "text": "친구들을 지키기 위해 싸우겠어! 준비됐으면 정면으로 덤벼! 지유야!!! 어서 와 줘!!! 끝까지 응원해 줘!!!"
+    },
+    {
+      "id": "motivation-051",
+      "trigger": "encounter",
+      "text": "루틴을 방해하게 둘 순 없어! 각오해라!!! 지유야!!! 응원해 줘!!! 도와줘!!!"
+    },
+    {
+      "id": "motivation-052",
+      "trigger": "encounter",
+      "text": "루틴을 방해하게 둘 순 없어! 받아라, 나의 필살기! 지유야!!! 응원해 줘!!! 몬스터를 함께 물리치자!!!"
+    },
+    {
+      "id": "motivation-053",
+      "trigger": "encounter",
+      "text": "루틴을 방해하게 둘 순 없어! 승리할 때까지 간다! 지유야!!! 응원해 줘!!! 내 편이 되어 줘!!!"
+    },
+    {
+      "id": "motivation-054",
+      "trigger": "encounter",
+      "text": "루틴을 방해하게 둘 순 없어! 절대 포기하지 않아! 지유야!!! 응원해 줘!!! 마지막 공격을 도와줘!!!"
+    },
+    {
+      "id": "motivation-055",
+      "trigger": "encounter",
+      "text": "루틴을 방해하게 둘 순 없어! 내 집중력은 철벽이야! 지유야!!! 응원해 줘!!! 우리 팀을 지켜줘!!!"
+    },
+    {
+      "id": "motivation-056",
+      "trigger": "encounter",
+      "text": "루틴을 방해하게 둘 순 없어! 오늘의 승부는 내가 가져간다! 지유야!!! 응원해 줘!!! 용기를 나눠 줘!!!"
+    },
+    {
+      "id": "motivation-057",
+      "trigger": "encounter",
+      "text": "루틴을 방해하게 둘 순 없어! 내 친구와 루틴은 내가 지켜! 지유야!!! 응원해 줘!!! 지금 힘을 보태 줘!!!"
+    },
+    {
+      "id": "motivation-058",
+      "trigger": "encounter",
+      "text": "루틴을 방해하게 둘 순 없어! 방해 공격은 통하지 않아! 지유야!!! 응원해 줘!!! 나와 함께 맞서 줘!!!"
+    },
+    {
+      "id": "motivation-059",
+      "trigger": "encounter",
+      "text": "루틴을 방해하게 둘 순 없어! 끝까지 상대해 주마! 지유야!!! 응원해 줘!!! 승리를 함께 만들어 줘!!!"
+    },
+    {
+      "id": "motivation-060",
+      "trigger": "encounter",
+      "text": "루틴을 방해하게 둘 순 없어! 준비됐으면 정면으로 덤벼! 지유야!!! 응원해 줘!!! 끝까지 응원해 줘!!!"
+    },
+    {
+      "id": "motivation-061",
+      "trigger": "encounter",
+      "text": "내가 먼저 반격하겠다! 각오해라!!! 지유야!!! 힘을 빌려줘!!! 도와줘!!!"
+    },
+    {
+      "id": "motivation-062",
+      "trigger": "encounter",
+      "text": "내가 먼저 반격하겠다! 받아라, 나의 필살기! 지유야!!! 힘을 빌려줘!!! 몬스터를 함께 물리치자!!!"
+    },
+    {
+      "id": "motivation-063",
+      "trigger": "encounter",
+      "text": "내가 먼저 반격하겠다! 승리할 때까지 간다! 지유야!!! 힘을 빌려줘!!! 내 편이 되어 줘!!!"
+    },
+    {
+      "id": "motivation-064",
+      "trigger": "encounter",
+      "text": "내가 먼저 반격하겠다! 절대 포기하지 않아! 지유야!!! 힘을 빌려줘!!! 마지막 공격을 도와줘!!!"
+    },
+    {
+      "id": "motivation-065",
+      "trigger": "encounter",
+      "text": "내가 먼저 반격하겠다! 내 집중력은 철벽이야! 지유야!!! 힘을 빌려줘!!! 우리 팀을 지켜줘!!!"
+    },
+    {
+      "id": "motivation-066",
+      "trigger": "encounter",
+      "text": "내가 먼저 반격하겠다! 오늘의 승부는 내가 가져간다! 지유야!!! 힘을 빌려줘!!! 용기를 나눠 줘!!!"
+    },
+    {
+      "id": "motivation-067",
+      "trigger": "encounter",
+      "text": "내가 먼저 반격하겠다! 내 친구와 루틴은 내가 지켜! 지유야!!! 힘을 빌려줘!!! 지금 힘을 보태 줘!!!"
+    },
+    {
+      "id": "motivation-068",
+      "trigger": "encounter",
+      "text": "내가 먼저 반격하겠다! 방해 공격은 통하지 않아! 지유야!!! 힘을 빌려줘!!! 나와 함께 맞서 줘!!!"
+    },
+    {
+      "id": "motivation-069",
+      "trigger": "encounter",
+      "text": "내가 먼저 반격하겠다! 끝까지 상대해 주마! 지유야!!! 힘을 빌려줘!!! 승리를 함께 만들어 줘!!!"
+    },
+    {
+      "id": "motivation-070",
+      "trigger": "encounter",
+      "text": "내가 먼저 반격하겠다! 준비됐으면 정면으로 덤벼! 지유야!!! 힘을 빌려줘!!! 끝까지 응원해 줘!!!"
+    },
+    {
+      "id": "motivation-071",
+      "trigger": "encounter",
+      "text": "이 대결, 내가 이길 거야! 각오해라!!! 지유야!!! 같이 싸워줘!!! 도와줘!!!"
+    },
+    {
+      "id": "motivation-072",
+      "trigger": "encounter",
+      "text": "이 대결, 내가 이길 거야! 받아라, 나의 필살기! 지유야!!! 같이 싸워줘!!! 몬스터를 함께 물리치자!!!"
+    },
+    {
+      "id": "motivation-073",
+      "trigger": "encounter",
+      "text": "이 대결, 내가 이길 거야! 승리할 때까지 간다! 지유야!!! 같이 싸워줘!!! 내 편이 되어 줘!!!"
+    },
+    {
+      "id": "motivation-074",
+      "trigger": "encounter",
+      "text": "이 대결, 내가 이길 거야! 절대 포기하지 않아! 지유야!!! 같이 싸워줘!!! 마지막 공격을 도와줘!!!"
+    },
+    {
+      "id": "motivation-075",
+      "trigger": "encounter",
+      "text": "이 대결, 내가 이길 거야! 내 집중력은 철벽이야! 지유야!!! 같이 싸워줘!!! 우리 팀을 지켜줘!!!"
+    },
+    {
+      "id": "motivation-076",
+      "trigger": "encounter",
+      "text": "이 대결, 내가 이길 거야! 오늘의 승부는 내가 가져간다! 지유야!!! 같이 싸워줘!!! 용기를 나눠 줘!!!"
+    },
+    {
+      "id": "motivation-077",
+      "trigger": "encounter",
+      "text": "이 대결, 내가 이길 거야! 내 친구와 루틴은 내가 지켜! 지유야!!! 같이 싸워줘!!! 지금 힘을 보태 줘!!!"
+    },
+    {
+      "id": "motivation-078",
+      "trigger": "encounter",
+      "text": "이 대결, 내가 이길 거야! 방해 공격은 통하지 않아! 지유야!!! 같이 싸워줘!!! 나와 함께 맞서 줘!!!"
+    },
+    {
+      "id": "motivation-079",
+      "trigger": "encounter",
+      "text": "이 대결, 내가 이길 거야! 끝까지 상대해 주마! 지유야!!! 같이 싸워줘!!! 승리를 함께 만들어 줘!!!"
+    },
+    {
+      "id": "motivation-080",
+      "trigger": "encounter",
+      "text": "이 대결, 내가 이길 거야! 준비됐으면 정면으로 덤벼! 지유야!!! 같이 싸워줘!!! 끝까지 응원해 줘!!!"
+    },
+    {
+      "id": "motivation-081",
+      "trigger": "encounter",
+      "text": "무섭긴 해도 피하지 않겠어! 각오해라!!! 지유야!!! 내 목소리 들리지!!! 도와줘!!!"
+    },
+    {
+      "id": "motivation-082",
+      "trigger": "encounter",
+      "text": "무섭긴 해도 피하지 않겠어! 받아라, 나의 필살기! 지유야!!! 내 목소리 들리지!!! 몬스터를 함께 물리치자!!!"
+    },
+    {
+      "id": "motivation-083",
+      "trigger": "encounter",
+      "text": "무섭긴 해도 피하지 않겠어! 승리할 때까지 간다! 지유야!!! 내 목소리 들리지!!! 내 편이 되어 줘!!!"
+    },
+    {
+      "id": "motivation-084",
+      "trigger": "encounter",
+      "text": "무섭긴 해도 피하지 않겠어! 절대 포기하지 않아! 지유야!!! 내 목소리 들리지!!! 마지막 공격을 도와줘!!!"
+    },
+    {
+      "id": "motivation-085",
+      "trigger": "encounter",
+      "text": "무섭긴 해도 피하지 않겠어! 내 집중력은 철벽이야! 지유야!!! 내 목소리 들리지!!! 우리 팀을 지켜줘!!!"
+    },
+    {
+      "id": "motivation-086",
+      "trigger": "encounter",
+      "text": "무섭긴 해도 피하지 않겠어! 오늘의 승부는 내가 가져간다! 지유야!!! 내 목소리 들리지!!! 용기를 나눠 줘!!!"
+    },
+    {
+      "id": "motivation-087",
+      "trigger": "encounter",
+      "text": "무섭긴 해도 피하지 않겠어! 내 친구와 루틴은 내가 지켜! 지유야!!! 내 목소리 들리지!!! 지금 힘을 보태 줘!!!"
+    },
+    {
+      "id": "motivation-088",
+      "trigger": "encounter",
+      "text": "무섭긴 해도 피하지 않겠어! 방해 공격은 통하지 않아! 지유야!!! 내 목소리 들리지!!! 나와 함께 맞서 줘!!!"
+    },
+    {
+      "id": "motivation-089",
+      "trigger": "encounter",
+      "text": "무섭긴 해도 피하지 않겠어! 끝까지 상대해 주마! 지유야!!! 내 목소리 들리지!!! 승리를 함께 만들어 줘!!!"
+    },
+    {
+      "id": "motivation-090",
+      "trigger": "encounter",
+      "text": "무섭긴 해도 피하지 않겠어! 준비됐으면 정면으로 덤벼! 지유야!!! 내 목소리 들리지!!! 끝까지 응원해 줘!!!"
+    },
+    {
+      "id": "motivation-091",
+      "trigger": "encounter",
+      "text": "모험가의 진짜 힘을 보여 주지! 각오해라!!! 지유야!!! 네 도움이 필요해!!! 도와줘!!!"
+    },
+    {
+      "id": "motivation-092",
+      "trigger": "encounter",
+      "text": "모험가의 진짜 힘을 보여 주지! 받아라, 나의 필살기! 지유야!!! 네 도움이 필요해!!! 몬스터를 함께 물리치자!!!"
+    },
+    {
+      "id": "motivation-093",
+      "trigger": "encounter",
+      "text": "모험가의 진짜 힘을 보여 주지! 승리할 때까지 간다! 지유야!!! 네 도움이 필요해!!! 내 편이 되어 줘!!!"
+    },
+    {
+      "id": "motivation-094",
+      "trigger": "encounter",
+      "text": "모험가의 진짜 힘을 보여 주지! 절대 포기하지 않아! 지유야!!! 네 도움이 필요해!!! 마지막 공격을 도와줘!!!"
+    },
+    {
+      "id": "motivation-095",
+      "trigger": "encounter",
+      "text": "모험가의 진짜 힘을 보여 주지! 내 집중력은 철벽이야! 지유야!!! 네 도움이 필요해!!! 우리 팀을 지켜줘!!!"
+    },
+    {
+      "id": "motivation-096",
+      "trigger": "encounter",
+      "text": "모험가의 진짜 힘을 보여 주지! 오늘의 승부는 내가 가져간다! 지유야!!! 네 도움이 필요해!!! 용기를 나눠 줘!!!"
+    },
+    {
+      "id": "motivation-097",
+      "trigger": "encounter",
+      "text": "모험가의 진짜 힘을 보여 주지! 내 친구와 루틴은 내가 지켜! 지유야!!! 네 도움이 필요해!!! 지금 힘을 보태 줘!!!"
+    },
+    {
+      "id": "motivation-098",
+      "trigger": "encounter",
+      "text": "모험가의 진짜 힘을 보여 주지! 방해 공격은 통하지 않아! 지유야!!! 네 도움이 필요해!!! 나와 함께 맞서 줘!!!"
+    },
+    {
+      "id": "motivation-099",
+      "trigger": "encounter",
+      "text": "모험가의 진짜 힘을 보여 주지! 끝까지 상대해 주마! 지유야!!! 네 도움이 필요해!!! 승리를 함께 만들어 줘!!!"
+    },
+    {
+      "id": "motivation-100",
+      "trigger": "encounter",
+      "text": "모험가의 진짜 힘을 보여 주지! 준비됐으면 정면으로 덤벼! 지유야!!! 네 도움이 필요해!!! 끝까지 응원해 줘!!!"
+    }
+  ]
+}

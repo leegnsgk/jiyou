@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "description": "응원 메시지에 사용하는 캐릭터 정보",
+  "characters": [
+    {
+      "id": "chiikawa",
+      "name": "치이카와",
+      "image": "../assets/images/characters/치이카와.png"
+    },
+    {
+      "id": "hachiware",
+      "name": "하치와레",
+      "image": "../assets/images/characters/하치와레.png"
+    },
+    {
+      "id": "usagi",
+      "name": "우사기",
+      "image": "../assets/images/characters/우사기.png"
+    },
+    {
+      "id": "momonga",
+      "name": "모몽가",
+      "image": "../assets/images/characters/모몽가.png"
+    },
+    {
+      "id": "kurimanju",
+      "name": "쿠리만쥬",
+      "image": "../assets/images/characters/쿠리만쥬.png"
+    },
+    {
+      "id": "rakko",
+      "name": "랏코",
+      "image": "../assets/images/characters/랏코.png"
+    },
+    {
+      "id": "shisa",
+      "name": "시사",
+      "image": "../assets/images/characters/시사.png"
+    }
+  ]
+}
